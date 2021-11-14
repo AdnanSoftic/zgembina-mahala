@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: adnans/mahala:latest
+          tags: docker.io/adnans/mahala:latest
           context: src
           file: src/Mahala.Api/Dockerfile
           secrets: |
