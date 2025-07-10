@@ -5,8 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Mahala.Api/Mahala.Api.csproj", "Mahala.Api/"]
-RUN dotnet restore "Mahala.Api/Mahala.Api.csproj"
+COPY ["src/Mahala.Api/Mahala.Api.csproj", "Mahala.Api/"]
+RUN dotnet restore "src/Mahala.Api/Mahala.Api.csproj"
 COPY . .
 WORKDIR "/src/Mahala.Api"
 RUN dotnet build "Mahala.Api.csproj" -c Release -o /app/build
